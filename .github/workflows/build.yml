@@ -32,6 +32,9 @@ jobs:
           wget -q https://services.gradle.org/distributions/gradle-8.4-bin.zip -O /tmp/gradle.zip
           unzip -q /tmp/gradle.zip -d /tmp/gradle-dist
 
+      - name: Show project files
+        run: ls -la
+
       - name: Build Debug APK
         run: |
           /tmp/gradle-dist/gradle-8.4/bin/gradle assembleDebug --no-daemon --stacktrace
